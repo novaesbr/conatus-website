@@ -31,7 +31,7 @@ export default function Home() {
       <header className="topbar">
         <div className="container">
           <div className="brand">
-            <img src="/assets/logo.png" alt="Conatus Logo" />
+            <img src="/images/logo.png" alt="Conatus Logo" />
           </div>
 
           <nav className="nav">
