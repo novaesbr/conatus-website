@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             <p className="coverage__note">
-              Procedimentos (MOP/SOP/EOP), validações técnicas, suporte em
+              Procedimentos (MOP/SOP/EOP,manuntenção), validações técnicas, suporte em
               implantações e capacitação operacional.
             </p>
           </div>
