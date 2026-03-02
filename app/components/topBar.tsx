@@ -21,7 +21,7 @@ export default function TopBar() {
           <a href="#servicos">Serviços</a>
           <a href="#institucional">Institucional</a>
           <a href="#">Aplicações</a>
-          <a href="#">Contato</a>
+          <a href="#contato">Contato</a>
         </nav>
       </div>
     </header>

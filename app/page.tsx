@@ -3,7 +3,9 @@ import Hero from "./components/hero"
 import Coverage from "./components/coverage"
 import About from "./components/about"
 import Services from "./components/services"
+import ABDC from "./components/abdc"
 import Institucional from "./components/institucional"
+import Contact from "./components/contact"
 
 
 export default function Page() {
@@ -14,7 +16,9 @@ export default function Page() {
       <About />
       <Services />
       <Institucional />
+      <ABDC />
       <Coverage />
+      <Contact />
     </>
   )
 }
