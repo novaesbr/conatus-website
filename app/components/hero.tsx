@@ -22,15 +22,15 @@ export default function Hero() {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length)
     }, 4000)
 
-    return () => clearInterval(interval)
+    return () => clearInterval(id)
   }, [slides.length])
 
   return (
-    <section className="hero">
+    <section className="hero" id="inicio">
       <div className="hero-slider">
         {slides.map((src, i) => (
           <Image
@@ -49,14 +49,14 @@ export default function Hero() {
         <h1>Excelência Operacional para Data Centers</h1>
 
         <p className="intro">
-          A <strong>Conatus Data Centers</strong> é uma consultoria
-          especializada em sustentabilidade operacional de data centers.
+          A <strong>Conatus Data Centers</strong> é uma consultoria especializada
+          em sustentabilidade operacional de data centers.
         </p>
 
         <p>
           Atuamos com a elaboração de procedimentos operacionais (
-          <strong>MOPs, SOPs e EOPs</strong>), alinhados às melhores práticas
-          e padrões exigidos pelo <strong>Uptime Institute</strong>.
+          <strong>MOPs, SOPs e EOPs</strong>), alinhados às melhores práticas e
+          padrões exigidos pelo <strong>Uptime Institute</strong>.
         </p>
 
         <ul className="benefits">
@@ -70,7 +70,7 @@ export default function Hero() {
           <li>Capacitação de equipes operacionais</li>
         </ul>
 
-        <a href="#" className="btn-primary">
+        <a href="#contato" className="btn-primary">
           Solicitar Proposta
         </a>
       </div>
