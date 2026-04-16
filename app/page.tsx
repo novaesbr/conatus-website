@@ -1,5 +1,6 @@
 import TopBar from "./components/topBar"
 import Hero from "./components/hero"
+import Grupo from "./components/grupo";
 import Coverage from "./components/coverage"
 import About from "./components/about"
 import Services from "./components/services"
@@ -14,6 +15,7 @@ export default function Page() {
     <>
       <TopBar />
       <Hero />
+      <Grupo />
       <About />
       <Services />
       <Institucional />

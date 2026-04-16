@@ -31,7 +31,7 @@ export default function TopBar() {
       <div className="container">
         <div className="brand">
           <Image
-            src="/images/logo-v2.png"
+            src="/images/logo-data-centers.svg"
             alt="Conatus Logo"
             width={280}
             height={90}
@@ -42,6 +42,7 @@ export default function TopBar() {
 
         <nav className="nav">
           <a href="#inicio">Início</a>
+          <a href="#grupo">Grupo</a>
           <a href="#sobre">Sobre</a>
           <a href="#servicos">Serviços</a>
           <a href="#institucional">Institucional</a>

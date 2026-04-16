@@ -10,11 +10,8 @@ export default function Hero() {
       "/images/slide2.jpeg",
       "/images/slide3.jpeg",
       "/images/slide4.jpeg",
-      "/images/slide5.jpeg",
       "/images/slide6.jpeg",
       "/images/slide7.jpeg",
-      "/images/slide8.jpeg",
-      "/images/slide9.jpeg",
     ],
     []
   )
