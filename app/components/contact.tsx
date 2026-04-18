@@ -5,85 +5,83 @@ export default function Contact() {
     <section className="contact" id="contato">
       <div className="contact__container">
         <div className="contact__head">
-          <h2 className="contact__title">Contato</h2>
+          <h2 className="contact__title">Entre em <span>Contato</span></h2>
           <p className="contact__subtitle">
-            Fale com a Conatus e receba uma proposta personalizada.
+            Fale com a equipe Conatus para receber uma proposta especializada ou diagnóstico na América Latina.
           </p>
         </div>
 
         <div className="contact__grid">
+          {/* INFO PANELS */}
+          <aside className="contact__info">
+            <div className="contact-card glass">
+              <div className="contact-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div className="contact-card__text">
+                <h3>E-mail Direto</h3>
+                <a href="mailto:contato@conatusprocedures.com">contato@conatusprocedures.com</a>
+              </div>
+            </div>
+
+            <div className="contact-card glass">
+              <div className="contact-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div className="contact-card__text">
+                <h3>Telefone</h3>
+                <a href="tel:+5511971216364">+55 (11) 9 7121-6364</a>
+              </div>
+            </div>
+
+            <div className="contact-card glass">
+              <div className="contact-card__icon">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div className="contact-card__text">
+                <h3>Sede Principal</h3>
+                <span>São Paulo, SP – Brasil</span>
+              </div>
+            </div>
+
+            <div className="contact__note glass">
+              <strong>Atendimento:</strong> Segunda a Sexta, 08h–18h (BRT).
+            </div>
+          </aside>
+
           {/* FORM */}
-          <form className="contact__form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact__form glass-form" onSubmit={(e) => e.preventDefault()}>
             <div className="field">
               <label htmlFor="nome">Nome completo</label>
-              <input id="nome" name="nome" placeholder="Seu nome" />
+              <input id="nome" name="nome" placeholder="Seu Nome" />
             </div>
 
             <div className="field">
-              <label htmlFor="email">E-mail</label>
-              <input id="email" name="email" placeholder="seuemail@empresa.com" />
-            </div>
-
-            <div className="field">
-              <label htmlFor="empresa">Empresa</label>
-              <input id="empresa" name="empresa" placeholder="Nome da empresa" />
+              <label htmlFor="email">E-mail corporativo</label>
+              <input id="email" name="email" placeholder="nome@empresa.com" />
             </div>
 
             <div className="field field--full">
-              <label htmlFor="mensagem">Mensagem</label>
+              <label htmlFor="empresa">Nome da Empresa</label>
+              <input id="empresa" name="empresa" placeholder="Empresa S.A." />
+            </div>
+
+            <div className="field field--full">
+              <label htmlFor="mensagem">Mensagem, escopo ou demanda</label>
               <textarea
                 id="mensagem"
                 name="mensagem"
-                placeholder="Descreva sua necessidade (escopo, prazo, site, etc.)"
+                placeholder="Detalhe brevemente as necessidades do seu ambiente crítico..."
                 rows={5}
               />
             </div>
 
             <div className="contact__actions">
-              <button className="btn-primary btn-primary--full" type="submit">
-                Enviar
+              <button className="btn-glow" type="submit">
+                Enviar Mensagem
               </button>
-              <p className="contact__hint">
-                Ou envie direto para{" "}
-                <a href="mailto:contato@conatusprocedures.com">contato@conatusprocedures.com</a>
-              </p>
             </div>
           </form>
-
-          {/* INFO */}
-          <aside className="contact__info">
-            <div className="contact-card">
-              <h3>Fale com a gente</h3>
-
-              <a className="contact-link" href="mailto:contato@conatusprocedures.com">
-                <span className="contact-link__label">E-mail</span>
-                <span className="contact-link__value">contato@conatusprocedures.com</span>
-              </a>
-
-              <a className="contact-link" href="tel:+5511971216364">
-                <span className="contact-link__label">Telefone</span>
-                <span className="contact-link__value">+55 (11) 9 7121-6364</span>
-              </a>
-            </div>
-
-            <div className="contact-card">
-              <h3>Redes</h3>
-
-              <a className="contact-link" href="https://www.linkedin.com/company/conatusprocedures/" target="_blank" rel="noreferrer">
-                <span className="contact-link__label">LinkedIn</span>
-                <span className="contact-link__value">Acessar perfil</span>
-              </a>
-
-              <a className="contact-link" href="https://www.instagram.com/conatusprocedures/" target="_blank" rel="noreferrer">
-                <span className="contact-link__label">Instagram</span>
-                <span className="contact-link__value">Acessar perfil</span>
-              </a>
-            </div>
-
-            <div className="contact__note">
-              <strong>Atendimento:</strong> Segunda a Sexta, 08h–18h (BRT).
-            </div>
-          </aside>
         </div>
       </div>
     </section>

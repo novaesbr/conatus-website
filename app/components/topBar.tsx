@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
 export default function TopBar() {
@@ -41,11 +42,11 @@ export default function TopBar() {
         </div>
 
         <nav className="nav">
-          <a href="#inicio">Início</a>
-          <a href="#grupo">Grupo</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#institucional">Institucional</a>
+          <Link href="/#inicio">Início</Link>
+          <Link href="/#grupo">Grupo</Link>
+          <Link href="/#sobre">Sobre</Link>
+          <Link href="/#servicos">Serviços</Link>
+          <Link href="/#institucional">Institucional</Link>
 
           {/* DROPDOWN APLICAÇÕES */}
           <div className="nav__dropdown" ref={appsRef}>
@@ -65,7 +66,7 @@ export default function TopBar() {
               </a>
             </div>
           </div>
-          <a href="#contato">Contato</a>
+          <Link href="/contato">Contato</Link>
         </nav>
       </div>
     </header>

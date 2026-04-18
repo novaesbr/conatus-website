@@ -6,7 +6,6 @@ import About from "./components/about"
 import Services from "./components/services"
 import ABDC from "./components/abdc"
 import Institucional from "./components/institucional"
-import Contact from "./components/contact"
 import Footer from "./components/footer"
 
 
@@ -21,7 +20,6 @@ export default function Page() {
       <Institucional />
       <ABDC />
       <Coverage />
-      <Contact />
       <Footer />
     </>
   )

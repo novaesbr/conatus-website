@@ -49,8 +49,8 @@ export default function Grupo() {
                   <Image
                     src={card.logo}
                     alt={card.title}
-                    width={220}
-                    height={80}
+                    width={280}
+                    height={70}
                     className="grupo__logoImage"
                   />
                 </div>
