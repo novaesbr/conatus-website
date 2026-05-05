@@ -31,9 +31,9 @@ export default function Footer() {
         <div className="footer__col">
           <h4>Contato</h4>
           <ul>
-            <li>contato@conatusprocedures.com</li>
-            <li>+55 (11) 9 7121-6364</li>
-            <li>São Paulo – Brasil</li>
+            <li>giovanni.silva@conatusprocedures.com</li>
+            <li>+55 11 91230-1413</li>
+            <li>São Paulo, SP - Brasil</li>
           </ul>
         </div>
 

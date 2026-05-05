@@ -9,9 +9,7 @@ export default function Hero() {
       "/images/slide1.jpeg",
       "/images/slide2.jpeg",
       "/images/slide3.jpeg",
-      "/images/slide4.jpeg",
-      "/images/slide6.jpeg",
-      "/images/slide7.jpeg",
+      "/images/slide4.jpeg"
     ],
     []
   )
@@ -43,32 +41,28 @@ export default function Hero() {
       </div>
 
       <div className="hero-text">
-        <h1>Excelência Operacional para Data Centers</h1>
+        <h1>Excelência operacional e confiabilidade para Data Centers</h1>
 
         <p className="intro">
-          A <strong>Conatus Data Centers</strong> é uma consultoria especializada
-          em sustentabilidade operacional de data centers.
+          A <strong>Conatus Data Centers</strong> é responsável por liderar a estratégia, governança e integração de serviços especializados para infraestruturas críticas de Data Centers.
         </p>
 
         <p>
-          Atuamos com a elaboração de procedimentos operacionais (
-          <strong>MOPs, SOPs e EOPs</strong>), alinhados às melhores práticas e
-          padrões exigidos pelo <strong>Uptime Institute</strong>.
+          Atuamos garantindo consistência operacional, alta confiabilidade e evolução sustentável ao longo de todo o ciclo de vida dos ativos e sistemas, desde a implementação até a operação contínua.
+        </p>
+
+        <p>
+          Somos o elo central que conecta pessoas, processos e tecnologia, assegurando excelência operacional e aderência às melhores práticas globais.
         </p>
 
         <ul className="benefits">
-          <li>Foco em conformidade e segurança</li>
-          <li>Personalização para cada cliente</li>
-          <li>Experiência com ambientes críticos</li>
-          <li>Procedimentos alinhados ao Uptime Institute</li>
-          <li>Suporte técnico contínuo em implantações</li>
-          <li>Equipe com experiência em data centers Tier III e IV</li>
-          <li>Documentação clara, visual e auditável</li>
-          <li>Capacitação de equipes operacionais</li>
+          <li>Conatus Procedures</li>
+          <li>Conatus Institute</li>
+          <li>Conatus Operations & Technology</li>
         </ul>
 
         <a href="#contato" className="btn-primary">
-          Solicitar Proposta
+          Entrar em Contato
         </a>
       </div>
     </section>

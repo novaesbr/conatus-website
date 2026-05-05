@@ -20,7 +20,7 @@ export default function Contact() {
               </div>
               <div className="contact-card__text">
                 <h3>E-mail Direto</h3>
-                <a href="mailto:contato@conatusprocedures.com">contato@conatusprocedures.com</a>
+                <a href="mailto:giovanni.silva@conatusprocedures.com">giovanni.silva@conatusprocedures.com</a>
               </div>
             </div>
 
@@ -30,7 +30,7 @@ export default function Contact() {
               </div>
               <div className="contact-card__text">
                 <h3>Telefone</h3>
-                <a href="tel:+5511971216364">+55 (11) 9 7121-6364</a>
+                <a href="tel:+5511912301413">+55 11 91230-1413</a>
               </div>
             </div>
 

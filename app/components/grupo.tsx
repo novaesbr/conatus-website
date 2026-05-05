@@ -28,7 +28,10 @@ export default function Grupo() {
     <section className="grupo" id="grupo">
       <div className="grupo__container">
         <div className="grupo__left">
-          <h2 className="grupo__title grupo__title--main">CONATUS DATA CENTERS</h2>
+          <h2 className="grupo__title grupo__title--main">
+            <span style={{ display: 'block', fontSize: 'inherit', lineHeight: '1.2' }}>CONATUS</span>
+            <span style={{ display: 'block', fontSize: '0.5em', lineHeight: '1.2', marginTop: '0.2em' }}>DATA CENTERS</span>
+          </h2>
         </div>
 
         <div className="grupo__right">

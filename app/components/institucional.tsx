@@ -13,18 +13,14 @@ export default function Institutional() {
             <article className="institutional__card">
               <h3>Missão</h3>
               <p>
-                Prover excelência na elaboração de procedimentos operacionais para data centers,
-                garantindo a sustentabilidade operacional, a segurança e a conformidade com os mais
-                altos padrões da indústria, como os definidos pelo Uptime Institute.
+                Prover excelência na estruturação, padronização e governança de operações em Data Centers, garantindo segurança, confiabilidade, eficiência e conformidade ao longo de todo o ciclo de vida da infraestrutura, alinhado às melhores práticas globais, incluindo os padrões do Uptime Institute.
               </p>
             </article>
   
             <article className="institutional__card">
               <h3>Visão</h3>
               <p>
-                Ser referência nacional e internacional em consultoria de procedimentos operacionais
-                para data centers, contribuindo para operações resilientes, eficientes e seguras nas
-                infraestruturas críticas do mundo digital.
+                Ser referência nacional e internacional em excelência operacional para Data Centers, liderando a evolução de operações críticas por meio de processos estruturados, tecnologia e capacitação, contribuindo para infraestruturas resilientes, sustentáveis e de alta performance no mundo digital.
               </p>
             </article>
   

@@ -1,0 +1,134 @@
+{
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\eslint.config.mjs": {
+    "mtime": 1772633148.042461,
+    "hash": "6c4307ffa009658f5c97f5629094c0c2"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\next-env.d.ts": {
+    "mtime": 1776526296.093601,
+    "hash": "29f60a376e12bf72b67d4994fcc84214"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\next.config.ts": {
+    "mtime": 1772633148.0434592,
+    "hash": "025f4fcb6024b3524d19492cf7ce54a2"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\postcss.config.mjs": {
+    "mtime": 1772633148.0474482,
+    "hash": "481fac0fdecd70e1821cc30b86030c1a"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\layout.tsx": {
+    "mtime": 1776261433.709827,
+    "hash": "e2be99a103782db4ac0f415fb2550355"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\page.tsx": {
+    "mtime": 1776375932.6705265,
+    "hash": "f3709aab08310ba1c2d7a1e05ec417e0"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\abdc.tsx": {
+    "mtime": 1772633148.0334857,
+    "hash": "29192ec703513074da0170a7d029b37f"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\about.tsx": {
+    "mtime": 1772737710.163603,
+    "hash": "1f17afcdccd55bee77492dd482211d4b"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\contact.tsx": {
+    "mtime": 1776376174.268078,
+    "hash": "bf9d1990320073e0f4bf2a6133ad2e05"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\coverage.tsx": {
+    "mtime": 1776375066.7623067,
+    "hash": "3b9ebdbd85f4ff174b44bb2474e9b261"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\footer.tsx": {
+    "mtime": 1776375963.198897,
+    "hash": "d2a5803d3b87ef0f6dcb1cc6f2094de2"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\grupo.tsx": {
+    "mtime": 1776469889.1473424,
+    "hash": "5d963109705ce099b1f8ba7f8998a217"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\hero.tsx": {
+    "mtime": 1777906245.4467683,
+    "hash": "3d6eff5cf2cddbba3b20af0e500d6665"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\institucional.tsx": {
+    "mtime": 1772633148.0384727,
+    "hash": "fcf6b5ef4b436876066158edb0bf298f"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\services.tsx": {
+    "mtime": 1772633148.039471,
+    "hash": "fb615a1d5cae4e3de4a2d08b79d7d298"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\components\\topBar.tsx": {
+    "mtime": 1776375949.4136057,
+    "hash": "601cdcabf6725f1802e01ca554d2be92"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\app\\contato\\page.tsx": {
+    "mtime": 1776375917.1615295,
+    "hash": "77f7405ff96145213cf53029edbe26ef"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\README.md": {
+    "mtime": 1772633147.9995766,
+    "hash": "9162add00befbcdb432430f405c4ad8d"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\grupo2.png": {
+    "mtime": 1776279794.9220626,
+    "hash": "3172ddc5def5dc376a19df950d383717"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\grupo3.png": {
+    "mtime": 1776265967.1241252,
+    "hash": "59988e4b09a7ed379ff3c239ea93be88"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\grupo4.png": {
+    "mtime": 1776266063.5416,
+    "hash": "d701850a1f1a770e561bfc04e729b8bc"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\icone.png": {
+    "mtime": 1776176291.7829776,
+    "hash": "23a5536716df7908e1b4e097204e09bd"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\latam-map-ai.png": {
+    "mtime": 1776373812.2190216,
+    "hash": "2dc699fb2a0989e8a59242aef200fd2a"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\latam-map-dark.png": {
+    "mtime": 1776375010.0440438,
+    "hash": "21cdea7f8915f967fd31a88370121fb3"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\logo-abdc.png": {
+    "mtime": 1772633148.05443,
+    "hash": "7fc6e82c58b6663b75d3873e57e1d801"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\logo-data-centers.svg": {
+    "mtime": 1776178103.3877442,
+    "hash": "b1a8082b1e4c1353e00c7340ffe858ee"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\logo-institute.svg": {
+    "mtime": 1776178103.4142756,
+    "hash": "edf8493ea57438efc4ac940ad03a771d"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\logo-operations.svg": {
+    "mtime": 1776178103.4304502,
+    "hash": "892c101efca79ecc6d284509de8696db"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\logo-procedures.svg": {
+    "mtime": 1776178103.3993154,
+    "hash": "70cfa7e09a2e73c624a78f35ca54619c"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\slide1.jpeg": {
+    "mtime": 1777911720.0,
+    "hash": "ac6267599d76756e20a2ad327f2724c9"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\slide2.jpeg": {
+    "mtime": 1777911720.0,
+    "hash": "da86ae33743c7ccbbedff71156260f4e"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\slide3.jpeg": {
+    "mtime": 1777911720.0,
+    "hash": "91f834f250e742c5693055ccf8736639"
+  },
+  "C:\\Users\\Edgard\\Desktop\\conatus-website\\conatus-website\\public\\images\\slide4.jpeg": {
+    "mtime": 1777911720.0,
+    "hash": "9d98a93c03d98454c4554049c59c4b0b"
+  }
+}
