@@ -23,13 +23,13 @@ const icons = [
   [Wrench, Settings, Cpu, Zap, Lightbulb]
 ]
 
-const groupColors = ["#22c55e", "#a855f7", "#06b6d4"]
+const groupColors = ["#06b6d4", "#22c55e", "#a855f7"]
 
 export default function Services() {
   const groups = [
     {
       title: "Procedures",
-      subtitle: "Padronização e governança (SOP, MOP, EOP)",
+      subtitle: "Desenvolvemos, padronizamos e governamos procedimentos operacionais críticos para garantir segurança, consistência e redução de riscos.",
       items: [
         { title: "Elaboração e Padronização de Procedimentos", desc: "Desenvolvimento de SOP, MOP e EOP alinhados às melhores práticas e aos padrões do Uptime Institute." },
         { title: "Mapeamento e Estruturação de Processos Críticos", desc: "Definição de fluxos, papéis e responsabilidades para operações e manutenções em Data Centers." },
@@ -73,9 +73,11 @@ export default function Services() {
         <div className="services-sections">
           {groups.map((group, i) => (
             <div key={i} className="services-section">
-              <div className="group-header">
-                <h3 style={{ color: groupColors[i] }}>{group.title}</h3>
-                <p>{group.subtitle}</p>
+              <div className="services-section-header">
+                <div className="group-header">
+                  <h3 style={{ color: groupColors[i] }}>{group.title}</h3>
+                </div>
+                <p className="group-subtitle">{group.subtitle}</p>
               </div>
 
               <div className="service-cards">

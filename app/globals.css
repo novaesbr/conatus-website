@@ -645,6 +645,19 @@ body{
   background: rgba(255,255,255,0.035);
   border-radius: 10px;
   padding: 24px 28px 22px;
+  display: flex;
+  gap: 20px;
+}
+
+.services-section-header {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-section .service-cards {
+  flex: 1;
 }
 
 .group-header {
@@ -662,6 +675,12 @@ body{
 .group-header p {
   font-size: 13px;
   color: #9fb3c8;
+}
+
+.group-subtitle {
+  font-size: 13px;
+  color: #9fb3c8;
+  margin-bottom: 18px;
 }
 
 .service-cards {
