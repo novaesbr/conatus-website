@@ -14,8 +14,13 @@ import {
   Settings, 
   Cpu, 
   Zap, 
-  Lightbulb
+  Lightbulb,
+  ClipboardList,
+  GraduationCap as GraduationCapIcon,
+  Cog
 } from "lucide-react"
+
+const sectionIcons = [ClipboardList, GraduationCapIcon, Cog]
 
 const icons = [
   [FileText, Shield, BookOpen, Users, GraduationCap],
@@ -27,9 +32,10 @@ const groupColors = ["#06b6d4", "#22c55e", "#a855f7"]
 
 export default function Services() {
   const groups = [
-    {
+{
       title: "Procedures",
-      subtitle: "Desenvolvemos, padronizamos e governamos procedimentos operacionais críticos para garantir segurança, consistência e redução de riscos.",
+      subtitle: "Padronização e governança (SOP, MOP, EOP)",
+      description: "Desenvolvemos, padronizamos e governamos procedimentos operacionais críticos para garantir segurança, consistência e redução de riscos.",
       items: [
         { title: "Elaboração e Padronização de Procedimentos", desc: "Desenvolvimento de SOP, MOP e EOP alinhados às melhores práticas e aos padrões do Uptime Institute." },
         { title: "Mapeamento e Estruturação de Processos Críticos", desc: "Definição de fluxos, papéis e responsabilidades para operações e manutenções em Data Centers." },
@@ -41,6 +47,7 @@ export default function Services() {
     {
       title: "Institute",
       subtitle: "Capacitação e certificação técnica",
+      description: "Capacitamos profissionais e promovemos o desenvolvimento contínuo de equipes para excelência técnica e operacional.",
       items: [
         { title: "Treinamentos Especializados", desc: "Programas de capacitação em operações, manutenção e boas práticas para Data Centers." },
         { title: "Certificações Profissionais", desc: "Certificação técnica de profissionais com base em padrões operacionais consolidados." },
@@ -52,6 +59,7 @@ export default function Services() {
     {
       title: "Operations & Technology",
       subtitle: "Execução, inovação e performance operacional",
+      description: "Gerenciamos operações críticas e desenvolvemos soluções tecnológicas para eficiência, confiabilidade e inovação contínua.",
       items: [
         { title: "Gestão Operacional", desc: "Operação e suporte técnico especializado para ambientes críticos 24x7." },
         { title: "Manutenção Planejada e Preventiva", desc: "Execução de planos de manutenção com foco em confiabilidade e disponibilidade." },
@@ -63,7 +71,7 @@ export default function Services() {
   ]
 
   return (
-    <section className="services">
+    <section className="services" id="servicos">
       <div className="services__container">
         <div className="services__header">
           <h2>SERVIÇOS</h2>
@@ -74,10 +82,17 @@ export default function Services() {
           {groups.map((group, i) => (
             <div key={i} className="services-section">
               <div className="services-section-header">
-                <div className="group-header">
-                  <h3 style={{ color: groupColors[i] }}>{group.title}</h3>
+                <div className="services-section-icon" style={{ color: groupColors[i] }}>
+                  {(() => {
+                    const Icon = sectionIcons[i]
+                    return <Icon size={32} />
+                  })()}
                 </div>
-                <p className="group-subtitle">{group.subtitle}</p>
+                <div className="services-section-content">
+                  <h3 style={{ color: groupColors[i] }}>{group.title}</h3>
+                  <p>{group.subtitle}</p>
+                  {group.description && <p className="group-description">{group.description}</p>}
+                </div>
               </div>
 
               <div className="service-cards">
