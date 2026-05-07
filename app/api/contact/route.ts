@@ -29,7 +29,14 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true, data });
+    if (data.error) {
+      return NextResponse.json(
+        { error: "Erro ao enviar e-mail", details: data.error.message },
+        { status: 400 }
+      );
+    }
+
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Resend error:", error);
     return NextResponse.json(

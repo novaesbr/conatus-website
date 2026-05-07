@@ -25,12 +25,12 @@ export default function Contact() {
       })
 
       const result = await res.json()
-      console.log("API response:", result)
 
-      if (res.ok) {
+      if (res.ok && result.success) {
         setStatus("success")
         e.currentTarget.reset()
       } else {
+        console.error("API error:", result)
         setStatus("error")
       }
     } catch (err) {
