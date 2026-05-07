@@ -4,6 +4,7 @@ import Grupo from "./components/grupo";
 import Coverage from "./components/coverage"
 import About from "./components/about"
 import Services from "./components/services"
+import Parceiro from "./components/parceiro"
 import ABDC from "./components/abdc"
 import Institucional from "./components/institucional"
 import Footer from "./components/footer"
@@ -18,8 +19,9 @@ export default function Page() {
       <About />
       <Services />
       <Institucional />
-      <ABDC />
       <Coverage />
+      <Parceiro />
+      <ABDC />
       <Footer />
     </>
   )

@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react"
 
 export default function TopBar() {
   const [appsOpen, setAppsOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const appsRef = useRef<HTMLDivElement | null>(null)
 
   // fecha ao clicar fora
@@ -41,14 +42,13 @@ export default function TopBar() {
           />
         </div>
 
-        <nav className="nav">
-          <Link href="/#inicio">Início</Link>
-          <Link href="/#grupo">Grupo</Link>
-          <Link href="/#sobre">Sobre</Link>
-          <Link href="/#servicos">Serviços</Link>
-          <Link href="/#institucional">Institucional</Link>
+        <nav className={`nav ${mobileOpen ? 'nav--open' : ''}`}>
+          <Link href="/#inicio" onClick={() => setMobileOpen(false)}>Início</Link>
+          <Link href="/#grupo" onClick={() => setMobileOpen(false)}>Grupo</Link>
+          <Link href="/#sobre" onClick={() => setMobileOpen(false)}>Sobre</Link>
+          <Link href="/#servicos" onClick={() => setMobileOpen(false)}>Serviços</Link>
+          <Link href="/#institucional" onClick={() => setMobileOpen(false)}>Institucional</Link>
 
-          {/* DROPDOWN APLICAÇÕES */}
           <div className="nav__dropdown" ref={appsRef}>
             <button
               type="button"
@@ -61,13 +61,17 @@ export default function TopBar() {
             </button>
 
             <div className={`nav__menu ${appsOpen ? "is-open" : ""}`} role="menu">
-              <a role="menuitem" href="https://conatus.core.conatusprocedures.com/login" onClick={() => setAppsOpen(false)}>
+              <a role="menuitem" href="https://conatus.core.conatusprocedures.com/login" onClick={() => { setAppsOpen(false); setMobileOpen(false) }}>
                 Área do Cliente
               </a>
             </div>
           </div>
-          <Link href="/contato">Contato</Link>
+          <Link href="/contato" onClick={() => setMobileOpen(false)}>Contato</Link>
         </nav>
+
+        <button className="nav-toggle" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
+          <span className={`hamburger ${mobileOpen ? 'is-open' : ''}`}></span>
+        </button>
       </div>
     </header>
   )

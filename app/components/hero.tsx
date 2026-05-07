@@ -61,7 +61,7 @@ export default function Hero() {
           <li>Conatus Operations & Technology</li>
         </ul>
 
-        <a href="#contato" className="btn-primary">
+        <a href="/contato" className="btn-primary">
           Entrar em Contato
         </a>
       </div>
