@@ -31,13 +31,10 @@ export default function Contact() {
         body: JSON.stringify(data),
       })
 
-      const result = await res.json()
-
-      if (res.ok && result.success) {
+      if (res.ok) {
         setStatus("success")
         e.currentTarget.reset()
       } else {
-        console.error("API error:", result)
         setStatus("error")
       }
     } catch (err) {
