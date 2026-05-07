@@ -1658,6 +1658,86 @@ body{
   box-shadow: 0 4px 20px rgba(255, 82, 82, 0.2);
 }
 
+.toast-notification{
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 24px;
+  border-radius: 14px;
+  max-width: 380px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideInRight 0.4s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toast-notification svg{
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.toast-notification strong{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.toast-notification p{
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.toast-close{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.toast-close:hover{
+  opacity: 1;
+}
+
+.success-toast{
+  background: linear-gradient(135deg, #072a53 0%, #0d4677 100%);
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+}
+
+.success-toast svg{
+  color: #00e5ff;
+}
+
+.error-toast{
+  background: linear-gradient(135deg, #3d1a1a 0%, #531f1f 100%);
+  border: 1px solid #ff5252;
+  color: #ff5252;
+}
+
+.error-toast svg{
+  color: #ff5252;
+}
+
 /* RESPONSIVO */
 @media (max-width: 1200px){
   .contact{

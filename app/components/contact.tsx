@@ -1,9 +1,16 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+
+  useEffect(() => {
+    if (status === "success") {
+      const timer = setTimeout(() => setStatus("idle"), 5000)
+      return () => clearTimeout(timer)
+    }
+  }, [status])
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -40,6 +47,33 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contato">
+      {status === "success" && (
+        <div className="toast-notification success-toast">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <div>
+            <strong>Mensagem enviada com sucesso!</strong>
+            <p>Retornaremos em breve.</p>
+          </div>
+          <button className="toast-close" onClick={() => setStatus("idle")}>×</button>
+        </div>
+      )}
+      {status === "error" && (
+        <div className="toast-notification error-toast">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          <div>
+            <strong>Erro ao enviar mensagem</strong>
+            <p>Tente novamente.</p>
+          </div>
+          <button className="toast-close" onClick={() => setStatus("idle")}>×</button>
+        </div>
+      )}
       <div className="contact__container">
         <div className="contact__head">
           <h2 className="contact__title">Entre em <span>Contato</span></h2>
