@@ -1,6 +1,40 @@
 "use client"
 
+import { useState } from "react"
+
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setStatus("loading")
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      nome: formData.get("nome"),
+      email: formData.get("email"),
+      empresa: formData.get("empresa"),
+      mensagem: formData.get("mensagem"),
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      if (res.ok) {
+        setStatus("success")
+        e.currentTarget.reset()
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
+  }
+
   return (
     <section className="contact" id="contato">
       <div className="contact__container">
@@ -50,7 +84,17 @@ export default function Contact() {
           </aside>
 
           {/* FORM */}
-          <form className="contact__form glass-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact__form glass-form" onSubmit={handleSubmit}>
+            {status === "success" && (
+              <div className="form-message success">
+                Mensagem enviada com sucesso! Retornaremos em breve.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="form-message error">
+                Erro ao enviar mensagem. Tente novamente.
+              </div>
+            )}
             <div className="field">
               <label htmlFor="nome">Nome completo</label>
               <input id="nome" name="nome" placeholder="Seu Nome" />
@@ -77,8 +121,8 @@ export default function Contact() {
             </div>
 
             <div className="contact__actions">
-              <button className="btn-glow" type="submit">
-                Enviar Mensagem
+              <button className="btn-glow" type="submit" disabled={status === "loading"}>
+                {status === "loading" ? "Enviando..." : "Enviar Mensagem"}
               </button>
             </div>
           </form>
