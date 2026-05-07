@@ -31,8 +31,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
+    console.error("Resend error:", error);
     return NextResponse.json(
-      { error: "Erro ao enviar e-mail" },
+      { error: "Erro ao enviar e-mail", details: String(error) },
       { status: 500 }
     );
   }

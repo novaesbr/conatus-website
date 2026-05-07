@@ -24,13 +24,16 @@ export default function Contact() {
         body: JSON.stringify(data),
       })
 
+      const result = await res.json()
+      console.log("API response:", result)
+
       if (res.ok) {
         setStatus("success")
         e.currentTarget.reset()
       } else {
         setStatus("error")
       }
-    } catch {
+    } catch (err) {
       setStatus("error")
     }
   }
