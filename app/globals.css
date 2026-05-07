@@ -1622,23 +1622,40 @@ body{
 }
 
 .form-message{
-  padding: 14px 18px;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 12px;
   margin-bottom: 20px;
   font-size: 15px;
   font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-message.success{
-  background: rgba(0, 229, 255, 0.15);
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.2) 0%, rgba(0, 229, 255, 0.1) 100%);
   border: 1px solid #00e5ff;
   color: #00e5ff;
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.2);
 }
 
 .form-message.error{
-  background: rgba(255, 82, 82, 0.15);
+  background: linear-gradient(135deg, rgba(255, 82, 82, 0.2) 0%, rgba(255, 82, 82, 0.1) 100%);
   border: 1px solid #ff5252;
   color: #ff5252;
+  box-shadow: 0 4px 20px rgba(255, 82, 82, 0.2);
 }
 
 /* RESPONSIVO */
