@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "602787d7a87fedec",
+        "id": "a2976855cf7dc284",
         "type": "tabs",
         "children": [
           {
-            "id": "60a3261a128a7cbc",
+            "id": "9cca20068369c962",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -176,8 +176,12 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "60a3261a128a7cbc",
+  "active": "9cca20068369c962",
   "lastOpenFiles": [
+    "docs/rules/no-set-state.md",
+    "node_modules/eslint-plugin-react/README.md",
+    "docs/rules",
+    "docs",
     "node_modules/cross-spawn/README.md",
     "doc/projects.md",
     "doc",
@@ -189,8 +193,6 @@
     "node_modules/lucide-react/dynamic.d.ts",
     "node_modules/lucide-react/dynamicIconImports.d.mts",
     "node_modules/lucide-react/dynamic.d.mts",
-    "node_modules/lucide-react/dist/esm/icons/zoom-out.mjs",
-    "node_modules/lucide-react/dist/esm/icons/zoom-in.mjs",
     "node_modules/lucide-react/README.md",
     "public/images/slide4.jpeg",
     "public/images/slide3.jpeg",

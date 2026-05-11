@@ -1,38 +1,34 @@
 "use client"
 
 import Image from "next/image"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
 export default function ABDC() {
+  const { t } = useContext(LanguageContext)
+
   return (
     <section className="abdc" id="abdc">
       <div className="abdc__container">
         <header className="abdc__head">
-          <h2>Associação com ABDC (Associação Brasileira de Data Center)</h2>
+          <h2>{t("abdc.title")}</h2>
           <p className="abdc__subtitle">
-            São Paulo, SP <span className="abdc__dot">•</span> 2025
+            {t("abdc.subtitle")} <span className="abdc__dot">•</span> 2025
           </p>
         </header>
 
         <div className="abdc__grid">
           <div className="abdc__text">
             <p>
-              A Conatus Data Centers tem o prazer de comunicar que faz parte da
-              Associação Brasileira de Data Center.
+              {t("abdc.text1")}
             </p>
 
             <p>
-              A ABDC é uma associação de empresas e profissionais do setor de
-              Data Center que se uniram para garantir que a próxima etapa de
-              crescimento deste mercado no Brasil se dê de maneira estruturada,
-              com profissionais qualificados, com normas técnicas locais e apoio
-              do poder público.
+              {t("abdc.text2")}
             </p>
 
             <p>
-              Com o ingresso da Conatus, temos a oportunidade de compartilhar
-              nossa vasta experiência em projetos de Data Center e infraestruturas
-              de missão crítica, contribuindo com a representatividade do setor,
-              bem como para o acesso a informações e boas práticas.
+              {t("abdc.text3")}
             </p>
 
             <a
@@ -41,7 +37,7 @@ export default function ABDC() {
               target="_blank"
               rel="noreferrer"
             >
-              Conheça o site <span aria-hidden>→</span>
+              {t("partners.visit")} <span aria-hidden>→</span>
             </a>
           </div>
 

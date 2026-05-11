@@ -1,30 +1,30 @@
 "use client"
 
 import Image from "next/image"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
 export default function Parceiro() {
+  const { t } = useContext(LanguageContext)
+
   return (
     <section className="parceiro" id="parceiros">
       <div className="parceiro__container">
         <header className="parceiro__head">
-          <h2>Parceiros</h2>
+          <h2>{t("partners.title")}</h2>
           <p className="parceiro__subtitle">
-            Colaborações que impulsionam resultados
+            {t("partners.subtitle")}
           </p>
         </header>
 
         <div className="parceiro__grid">
           <div className="parceiro__text">
             <p>
-              A Conatus Data Centers estabeleceu parcerias estratégicas com
-              líderes do setor para oferecer as melhores soluções em
-              infraestrutura de Data Centers.
+              {t("partners.text1")}
             </p>
 
             <p>
-              Nossas parcerias com empresas como a DCA garantem acesso às mais modernas
-              tecnologias e práticas do mercado, permitindo entregar
-              resultados excepcionais aos nossos clientes.
+              {t("partners.text2")}
             </p>
 
             <a
@@ -33,7 +33,7 @@ export default function Parceiro() {
               target="_blank"
               rel="noreferrer"
             >
-              Visite o site <span aria-hidden>→</span>
+              {t("partners.visit")} <span aria-hidden>→</span>
             </a>
           </div>
 

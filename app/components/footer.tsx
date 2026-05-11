@@ -1,7 +1,11 @@
 "use client"
+import { useContext } from "react"
 import Link from "next/link"
+import { LanguageContext } from "../context/LanguageContext"
 
 export default function Footer() {
+  const { t } = useContext(LanguageContext)
+
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -10,26 +14,25 @@ export default function Footer() {
         <div className="footer__col">
           <h3 className="footer__brand">Conatus Data Centers</h3>
           <p>
-            Excelência na elaboração de procedimentos operacionais
-            para data centers e infraestruturas de missão crítica.
+            {t("hero.intro")}
           </p>
         </div>
 
         {/* COLUNA 2 */}
         <div className="footer__col">
-          <h4>Navegação</h4>
+          <h4>{t("nav.institutional")}</h4>
           <ul>
-            <li><Link href="/#grupo">Grupo</Link></li>
-            <li><Link href="/#sobre">Sobre</Link></li>
-            <li><Link href="/#servicos">Serviços</Link></li>
-            <li><Link href="/#institucional">Institucional</Link></li>
-            <li><Link href="/contato">Contato</Link></li>
+            <li><Link href="/#grupo">{t("nav.group")}</Link></li>
+            <li><Link href="/#sobre">{t("nav.about")}</Link></li>
+            <li><Link href="/#servicos">{t("nav.services")}</Link></li>
+            <li><Link href="/#institucional">{t("nav.institutional")}</Link></li>
+            <li><Link href="/contato">{t("nav.contact")}</Link></li>
           </ul>
         </div>
 
         {/* COLUNA 3 */}
         <div className="footer__col">
-          <h4>Contato</h4>
+          <h4>{t("footer.contact")}</h4>
           <ul>
             <li>giovanni.silva@conatusprocedures.com</li>
             <li>+55 11 91230-1413</li>
@@ -40,8 +43,8 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom">
-        © {new Date().getFullYear()} Conatus Data Centers – Todos os direitos reservados.
+        © {new Date().getFullYear()} Conatus Data Centers – {t("footer.rights")}
       </div>
     </footer>
   )
-}
+}

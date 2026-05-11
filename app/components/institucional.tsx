@@ -1,13 +1,18 @@
-import { Target, Eye, Gem, ShieldCheck, Activity, Zap, FileCheck, Globe, Layers, Server, Cpu, Users } from 'lucide-react';
+"use client"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
+import { Target, Eye, Gem, ShieldCheck, Activity, Zap, FileCheck, Globe, Server, Cpu, Users } from 'lucide-react';
 
 export default function Institutional() {
+    const { t } = useContext(LanguageContext)
+
     return (
       <section className="institutional" id="institucional">
         <div className="institutional__container">
           <header className="institutional__head">
-            <h2>Institucional</h2>
+            <h2>{t("inst.title")}</h2>
             <p>
-              Direcionadores que sustentam a atuação da Conatus em ambientes de missão crítica.
+              {t("inst.subtitle")}
             </p>
           </header>
    
@@ -15,27 +20,27 @@ export default function Institutional() {
             <article className="institutional__card">
               <div className="institutional__card-header">
                 <Target className="institutional__icon" />
-                <h3>Missão</h3>
+                <h3>{t("inst.mission.title")}</h3>
               </div>
               <p>
-                Prover excelência na estruturação, padronização e governança de operações em Data Centers, garantindo <span className="institutional__highlight">segurança</span>, <span className="institutional__highlight">confiabilidade</span>, <span className="institutional__highlight">eficiência</span> e <span className="institutional__highlight">conformidade</span> ao longo de todo o ciclo de vida da infraestrutura, alinhado às melhores práticas globais, incluindo os padrões do Uptime Institute.
+                {t("inst.mission.text")}
               </p>
               <div className="institutional__badges">
-                <div className="institutional__badge" title="Segurança">
+                <div className="institutional__badge">
                   <ShieldCheck size={18} />
-                  <span>Segurança</span>
+                  <span>{t("nav.home") === "Início" ? "Segurança" : (t("language.en") === "English" ? "Security" : "Seguridad")}</span>
                 </div>
-                <div className="institutional__badge" title="Confiabilidade">
+                <div className="institutional__badge">
                   <Activity size={18} />
-                  <span>Confiabilidade</span>
+                  <span>{t("nav.home") === "Início" ? "Confiabilidade" : (t("language.en") === "English" ? "Reliability" : "Confiabilidad")}</span>
                 </div>
-                <div className="institutional__badge" title="Eficiência">
+                <div className="institutional__badge">
                   <Zap size={18} />
-                  <span>Eficiência</span>
+                  <span>{t("nav.home") === "Início" ? "Eficiência" : (t("language.en") === "English" ? "Efficiency" : "Eficiencia")}</span>
                 </div>
-                <div className="institutional__badge" title="Conformidade">
+                <div className="institutional__badge">
                   <FileCheck size={18} />
-                  <span>Conformidade</span>
+                  <span>{t("nav.home") === "Início" ? "Conformidade" : (t("language.en") === "English" ? "Compliance" : "Cumplimiento")}</span>
                 </div>
               </div>
             </article>
@@ -43,27 +48,27 @@ export default function Institutional() {
             <article className="institutional__card">
               <div className="institutional__card-header">
                 <Eye className="institutional__icon" />
-                <h3>Visão</h3>
+                <h3>{t("inst.vision.title")}</h3>
               </div>
-<p>
-                Ser <span className="institutional__highlight">referência</span> nacional e internacional em excelência operacional para Data Centers, liderando a evolução de operações críticas por meio de processos estruturados, tecnologia e capacitação, contribuindo para <span className="institutional__highlight">infraestruturas resilientes</span>, sustentáveis e de alta performance no <span className="institutional__highlight">mundo digital</span>.
+              <p>
+                {t("inst.vision.text")}
               </p>
               <div className="institutional__badges">
-                <div className="institutional__badge" title="Referência">
+                <div className="institutional__badge">
                   <Globe size={18} />
-                  <span>Referência</span>
+                  <span>{t("nav.home") === "Início" ? "Referência" : (t("language.en") === "English" ? "Reference" : "Referencia")}</span>
                 </div>
-                <div className="institutional__badge" title="Resiliência">
+                <div className="institutional__badge">
                   <ShieldCheck size={18} />
-                  <span>Resiliência</span>
+                  <span>{t("nav.home") === "Início" ? "Resiliência" : (t("language.en") === "English" ? "Resilience" : "Resiliencia")}</span>
                 </div>
-                <div className="institutional__badge" title="Infraestruturas Críticas">
+                <div className="institutional__badge">
                   <Server size={18} />
-                  <span>Infraestruturas</span>
+                  <span>{t("nav.home") === "Início" ? "Infraestrutura" : (t("language.en") === "English" ? "Infrastructure" : "Infraestructura")}</span>
                 </div>
-                <div className="institutional__badge" title="Mundo Digital">
+                <div className="institutional__badge">
                   <Cpu size={18} />
-                  <span>Mundo Digital</span>
+                  <span>{t("nav.home") === "Início" ? "Mundo Digital" : (t("language.en") === "English" ? "Digital World" : "Mundo Digital")}</span>
                 </div>
               </div>
             </article>
@@ -71,21 +76,20 @@ export default function Institutional() {
             <article className="institutional__card">
               <div className="institutional__card-header">
                 <Gem className="institutional__icon" />
-                <h3>Valores</h3>
+                <h3>{t("inst.values.title")}</h3>
               </div>
               <ul className="institutional__list">
-                <li>Confiabilidade</li>
-                <li>Excelência Técnica</li>
-                <li>Inovação Responsável</li>
-                <li>Compromisso com o Cliente</li>
-                <li>Ética e Transparência</li>
+                <li>{t("inst.values.item1")}</li>
+                <li>{t("inst.values.item2")}</li>
+                <li>{t("inst.values.item3")}</li>
+                <li>{t("inst.values.item4")}</li>
+                <li>{t("inst.values.item5")}</li>
               </ul>
             </article>
           </div>
           <p className="institutional__footer-text">
             <Users className="institutional__footer-icon" />
-            Pessoas, processos e tecnologia integrados<br />
-            <span className="institutional__highlight">para garantir excelência operacional e sustentabilidade em Data Centers.</span>
+            {t("inst.footer")}
           </p>
         </div>
       </section>

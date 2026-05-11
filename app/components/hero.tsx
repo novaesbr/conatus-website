@@ -1,9 +1,11 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useState, useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
 export default function Hero() {
+  const { t } = useContext(LanguageContext)
   const slides = useMemo(
     () => [
       "/images/slide1.jpeg",
@@ -41,18 +43,18 @@ export default function Hero() {
       </div>
 
       <div className="hero-text">
-        <h1>Excelência operacional e confiabilidade para Data Centers</h1>
+        <h1>{t("hero.title")}</h1>
 
         <p className="intro">
-          A <strong>Conatus Data Centers</strong> é responsável por liderar a estratégia, governança e integração de serviços especializados para infraestruturas críticas de Data Centers.
+          {t("hero.intro")}
         </p>
 
         <p>
-          Atuamos garantindo consistência operacional, alta confiabilidade e evolução sustentável ao longo de todo o ciclo de vida dos ativos e sistemas, desde a implementação até a operação contínua.
+          {t("hero.p1")}
         </p>
 
         <p>
-          Somos o elo central que conecta pessoas, processos e tecnologia, assegurando excelência operacional e aderência às melhores práticas globais.
+          {t("hero.p2")}
         </p>
 
         <ul className="benefits">
@@ -62,9 +64,9 @@ export default function Hero() {
         </ul>
 
         <a href="/contato" className="btn-primary">
-          Entrar em Contato
+          {t("hero.btn")}
         </a>
       </div>
     </section>
   )
-}
+}

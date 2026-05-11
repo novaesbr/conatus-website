@@ -5,40 +5,68 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    console.log("API_KEY:", process.env.RESEND_API_KEY ? "存在" : "不存在");
-    
     const body = await request.json();
-    const { nome, email, empresa, mensagem } = body;
+    const { nome, email, empresa, mensagem, confirmEmail } = body;
 
-    if (!nome || !email || !mensagem) {
-      return NextResponse.json(
-        { error: "Campos obrigatórios faltando" },
-        { status: 400 }
-      );
+    // 1. PROTEÇÃO CONTRA BOTS (Honeypot)
+    // Se o campo escondido "confirmEmail" estiver preenchido, é um bot.
+    if (confirmEmail) {
+      console.warn("Bot detectado via Honeypot.");
+      return NextResponse.json({ success: true }); // Fingimos sucesso para o bot desistir
     }
 
-    const data = await resend.emails.send({
+    // 2. VALIDAÇÃO MANUAL
+    if (!nome || nome.length < 2 || nome.length > 100) {
+      return NextResponse.json({ error: "Nome inválido" }, { status: 400 });
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      return NextResponse.json({ error: "E-mail inválido" }, { status: 400 });
+    }
+
+    if (!mensagem || mensagem.length < 10 || mensagem.length > 2000) {
+      return NextResponse.json({ error: "Mensagem muito curta ou muito longa" }, { status: 400 });
+    }
+
+    // 3. ENVIO SEGURO
+    const { error } = await resend.emails.send({
       from: "Conatus Website <onboarding@resend.dev>",
-      to: ["edigarhenriqu@gmail.com"],
-      subject: `Novo contato do site - ${nome}`,
+      to: ["edgardgpt@gmail.com"],
+      replyTo: email,
+      subject: `🛡️ Novo contato: ${nome}`,
       html: `
-        <h2>Novo contato do site Conatus</h2>
-        <p><strong>Nome:</strong> ${nome}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
-        <p><strong>Empresa:</strong> ${empresa || "Não informada"}</p>
-        <p><strong>Mensagem:</strong></p>
-        <p>${mensagem}</p>
+        <div style="font-family: sans-serif; padding: 20px; color: #333; line-height: 1.6;">
+          <h2 style="color: #6366f1; margin-bottom: 20px;">Novo contato via Site Conatus</h2>
+          <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <p style="margin: 0 0 10px 0;"><strong>👤 Nome:</strong> ${nome}</p>
+            <p style="margin: 0 0 10px 0;"><strong>📧 E-mail:</strong> ${email}</p>
+            <p style="margin: 0 0 20px 0;"><strong>🏢 Empresa:</strong> ${empresa || "Não informada"}</p>
+            <div style="margin-top: 20px; padding: 20px; background: #f9fafb; border-radius: 8px; border-left: 5px solid #6366f1;">
+              <p style="margin: 0 0 10px 0; font-weight: bold; color: #6366f1;">💬 Mensagem:</p>
+              <p style="margin: 0; white-space: pre-wrap; color: #4b5563;">${mensagem}</p>
+            </div>
+          </div>
+          <p style="font-size: 11px; color: #9ca3af; margin-top: 30px; text-align: center;">
+            Este e-mail foi enviado automaticamente pelo sistema de segurança da Conatus Data Centers.
+          </p>
+        </div>
       `,
     });
 
-    console.log("Resend response:", data);
+    if (error) {
+      console.error("Erro no Resend:", error);
+      return NextResponse.json({ error: "Erro ao enviar e-mail" }, { status: 500 });
+    }
 
-    return NextResponse.json({ success: true, data });
+    // 4. RETORNO LIMPO (Segurança: Não expomos detalhes internos da API)
+    return NextResponse.json({ success: true });
+
   } catch (error) {
-    console.error("Resend error:", error);
+    console.error("Erro crítico na rota de contato:", error);
     return NextResponse.json(
-      { success: true, message: "Email enviado" },
-      { status: 200 }
+      { error: "Erro interno no servidor." },
+      { status: 500 }
     );
   }
 }
